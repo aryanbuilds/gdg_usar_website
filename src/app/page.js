@@ -1,6 +1,6 @@
 import React from 'react';
-
 import Hero from './components/hero';
+import Footer from './components/Footer';
 import BentoGrid from './components/BentoGrid';
 import WeTextSection from './components/WeTextSection';
 
@@ -12,7 +12,7 @@ export default function Home() {
       <div className="relative min-h-screen">
         <main className="relative z-10">
           <section className="h-screen">
-            <Hero />
+            <Hero/>
           </section>
 
           <section>
@@ -24,7 +24,8 @@ export default function Home() {
           </section>
         </main>
       </div>
-    </div>
+      <Footer/>
+  </div>
   );
 }
 
