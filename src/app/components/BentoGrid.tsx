@@ -3,15 +3,9 @@ import React, { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
 import Image from "next/image";
+import {BENTO_ACTIVITY_IMAGES as activities} from "../../utils/constants";
 
 const BentoGrid: React.FC = () => {
-  const activities = [
-    { activity: "challenge", frame: "square", image: "/assets/illustrations/game-console.png" },
-    { activity: "explore", frame: "rect", image: "/assets/illustrations/earth.png" },
-    { activity: "speak", frame: "rect", image: "/assets/illustrations/mikes.png" },
-    { activity: "socialize", frame: "square", image: "/assets/illustrations/hashtag.png" },
-  ];
-
   return (
     <div className="min-h-screen px-8">
       <div className="max-w-4xl mx-auto flex-center flex-wrap gap-4 md:gap-8">
