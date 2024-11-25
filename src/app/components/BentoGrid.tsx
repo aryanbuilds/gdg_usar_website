@@ -13,8 +13,8 @@ const BentoGrid: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen px-8">
-      <div className="max-w-4xl mx-auto flex-center flex-wrap gap-4 md:gap-8">
+    <div className="w-full flex-center my-12">
+      <div className="max-w-screen-lg flex-center flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-12">
         {activities.map((item, index) => (
           <BentoGridItem
             key={index}
@@ -70,14 +70,14 @@ const BentoGridItem: React.FC<{ activity: string, frame: string, imageSrc: strin
     <div className="relative group">
       <div ref={frameRef} className="relative">
         <Image
-          className={`${frame === 'rect' ? 'w-96 h-72' : 'w-96 h-96 md:w-80 md:h-80'} z-50`}
+          className={`${frame === 'rect' ? 'w-96 h-72 sm:w-80 sm:h-72 md:w-96 md:h-72' : 'w-96 h-96 sm:w-72 sm:h-72 md:w-80 md:h-80'} z-50`}
           src={frame === "rect" ? "/assets/svgs/frame-rect.svg" : "/assets/svgs/frame-square.svg"}
           alt={`${activity} frame`}
           width={640}
           height={460}
         />
         <Image
-          className={`${frame === 'rect' ? 'w-48' : 'w-56'} grid-image group-hover:opacity-75 group-hover:blur-sm transition-all duration-300`}
+          className={`${frame === 'rect' ? 'w-48 sm:w-40' : 'w-56 sm:w-48'} grid-image group-hover:opacity-75 group-hover:blur-sm transition-all duration-300`}
           src={imageSrc}
           alt={activity}
           width={240}
